@@ -1,0 +1,16 @@
+# environment variables varies per environment
+*.env
+
+*.swp
+*.swo
+*.pyc
+*.DS_Store
+postgres-data/
+# Do not include static files
+static/
+
+
+# IDE
+.vscode/
+.idea/
+
