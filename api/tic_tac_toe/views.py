@@ -37,8 +37,15 @@ class GameViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
 
-    filter_backends = [filters.OrderingFilter]
-    ordering_fields = ['highest_score']
+    filter_backends = (
+        filters.OrderingFilter,
+        DjangoFilterBackend,
+    )
+    ordering_fields = ('highest_score',)
+    filterset_fields = {
+        'highest_score': ['isnull'],
+        'winner': ['isnull'],
+    }
 
 
 class GameRoundViewSet(viewsets.ModelViewSet):
@@ -49,4 +56,4 @@ class GameRoundViewSet(viewsets.ModelViewSet):
     serializer_class = GameRoundSerializer
 
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['game__id']
+    filterset_fields = ('game__id',)

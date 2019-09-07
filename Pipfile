@@ -7,7 +7,7 @@ name = "pypi"
 django = "==2.2.3"  # use latest version
 psycopg2 = "==2.8.3"
 django-filter = "*"
-
+django-cors-headers = "==3.1.0"
 djangorestframework = "==3.10.2"
 markdown = "==3.1.1"
 

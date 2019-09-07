@@ -25,6 +25,35 @@ DEBUG = True
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 SECRET_KEY = '}d1uT_.+:H)Ka7v'
 
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
+
+CORS_ALLOW_METHODS = (
+    'GET',
+    'POST',
+    'PATCH',
+    # 'DELETE' # We don't need this at this moment
+)
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
+
+ALLOWED_HOSTS = []
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    # add hosts here later
+]
+
 INSTALLED_APPS = [
     # Django apps:
     'django.contrib.auth',
@@ -41,11 +70,13 @@ INSTALLED_APPS = [
     # 3rd party apps:
     'rest_framework',
     'django_filters',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,7 +125,8 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        # remove permissions for now as it's not necessary at this moment
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
     'DEFAULT_FILTER_BACKENDS': [
         'django_filters.rest_framework.DjangoFilterBackend'
