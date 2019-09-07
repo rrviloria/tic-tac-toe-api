@@ -24,7 +24,7 @@ class GameSerializer(ModelSerializer):
             'player_x', 'player_x_score',
             'player_o', 'player_o_score',
             'player_x_name', 'player_o_name',
-            'winner', 'winner_name'
+            'winner', 'winner_name', 'created_at'
         )
 
 
