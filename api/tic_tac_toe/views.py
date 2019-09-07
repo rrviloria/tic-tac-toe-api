@@ -21,7 +21,6 @@ from api.tic_tac_toe.serializers import \
     PlayerSerializer, GameSerializer, GameRoundSerializer
 
 
-
 class PlayerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows products to be viewed or edited.

@@ -69,7 +69,6 @@ class GameAPITest(TestCase):
         # Test if request returns sucessfully
         self.assertTrue(response.status_code < 300)
         data = response.data
-        game = Game.objects.get(pk=data['id'])
         # Test if player_x is player1
         self.assertEquals(data['player_x'], player1.id)
         # Test if player_o is player2
