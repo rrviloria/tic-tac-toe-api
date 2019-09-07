@@ -1,6 +1,6 @@
 # raymund-tic-tac-toe
 
-This is the main repository for Raymund's Tic Tac Toe Game
+Repository made from **Django** framework
 
 ## Development environment
 
@@ -14,7 +14,7 @@ This was initially created using:
 ## Setup environment
 1) Clone this repo
 ```
-
+https://github.com/rrviloria/tic-tac-toe-api.git
 ```
 2) In the main directory (`manage.py` current directory) create a `.env` file with the following contents:
 
@@ -33,18 +33,21 @@ DB_PORT=5432
 ## Running PEP8 check
 Instructions on how to run PEP8 check(lint):
 
+https://github.com/rrviloria/tic-tac-toe-api/wiki/Running-PEP8-check
 
 
 ## Running tests
 Instructions on how to run tests:
 
+https://github.com/rrviloria/tic-tac-toe-api/wiki/Running-tests
 
 
 
 ## REST APIs
 Instructions on how to query REST APIs can be seen here:
 
-
+https://github.com/rrviloria/tic-tac-toe-api/wiki/Game-REST-APIs
+https://github.com/rrviloria/tic-tac-toe-api/wiki/Player-REST-APIs
 
 
 ## Additional information
